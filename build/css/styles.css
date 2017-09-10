@@ -1,0 +1,43 @@
+/*
+*  Place here style's resetting code
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+.users-list-container {
+  width: 100%;
+}
+
+.users-list-container .users-list {
+  list-style: none;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.users-list-container .users-list .user {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.users-list-container .users-list .user .first-name-container > span:first-child,
+.users-list-container .users-list .user .last-name-container > span:first-child,
+.users-list-container .users-list .user .title-container > span:first-child,
+.users-list-container .users-list .user .username-container > span:first-child,
+.users-list-container .users-list .user .website-container > span:first-child {
+  font-weight: bold;
+  text-decoration: underline;
+}
