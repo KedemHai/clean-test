@@ -1,0 +1,44 @@
+<html ng-app="myCheckApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>Movies App</title>
+		<!-- Styles -->
+		<link rel="stylesheet" href="./build/css/styles.css">
+	</head>
+	<body>
+		<div class="users-list-container" ng-controller="UsersController as vm">
+			<ul class="users-list" ng-cloak ng-show="vm.users">
+				<li class="user" ng-repeat="user in vm.users">
+					<div class="first-name-container">
+						<span>First Name:</span>
+						<span>{{user.firstName}}</span>
+					</div>
+					<div class="last-name-container">
+						<span>Last Name:</span>
+						<span>{{user.lastName}}</span>
+					</div>
+					<div class="title-container" ng-show="user.title">
+						<span>Title:</span>
+						<span>{{user.title}}</span>
+					</div>
+					<div class="username-container">
+						<span>Username:</span>
+						<span>{{user.username}}</span>
+					</div>
+					<div class="website-container">
+						<span>Website:</span>
+						<a ng-href="http://{{user.website}}">{{user.website}}</a>
+					</div>
+				</li>
+			</ul>
+			<p ng-show="vm.error" ng-cloak>
+				{{vm.error.errorMessage}}
+			</p>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./node_modules/angular/angular.min.js"></script>
+		<script src="./build/main.bundle.js"></script>
+	</body>
+</html>
